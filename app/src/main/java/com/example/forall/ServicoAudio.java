@@ -19,7 +19,6 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.os.Vibrator;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -86,12 +85,12 @@ public class ServicoAudio extends Service {
     public void onCreate(){
         super.onCreate();
         //Ler rede.
-        /*pesosIAoculto = lerAssets( "IW.txt");
+        pesosIAoculto = lerAssets( "IW.txt");
         viesesIAoculto = lerAssets( "b0.txt");
         pesosIAsaida = lerAssets("LW.txt");
         viesesIAsaida = lerAssets("b1.txt");
         re = lerAssets("re.txt");
-        rs = lerAssets("rs.txt");*/
+        rs = lerAssets("rs.txt");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             startMyOwnForeground();
@@ -136,35 +135,34 @@ public class ServicoAudio extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         if(cicloAtivo){
             cicloAtivo = false;
-            /*if(temposCalc != null) {
+            if(temposCalc != null) {
                 gravarTXT("T "+nomeTXT);
-            }*/
+            }
             stopSelf();
         }
         else {
             cicloAtivo = true;
-            //nomeTXT = intent.getStringExtra("nomeTXT");
+            nomeTXT = intent.getStringExtra("nomeTXT");
             tempo = intent.getLongExtra("tempo",3000);
             //Variáveis de sinal
             ts = intent.getIntExtra("tempoSinal",100); //tempo de sinalização
             metodoSinal = intent.getBooleanExtra("metodoSinal",true); //método de sinalização
             quantSinal = intent.getIntExtra("quantSinal",1);
             aquisicao = intent.getBooleanExtra("aquisicao",false);
-            Toast.makeText(this, "Sinalizando a cada "+tempo/quantSinal+"ms.", Toast.LENGTH_SHORT).show();
-            /*if(aquisicao){
+            if(aquisicao){
                 new Thread() {
                     @Override
                     public void run() {
                         gravarEtransformar();
                     }
                 }.start();
-            }*/
-            new Thread() {
+            }
+            /*new Thread() {
                 @Override
                 public void run() {
                     acionarSinal();
                 }
-            }.start();
+            }.start();*/
 
         }
         return START_REDELIVER_INTENT;
@@ -173,9 +171,9 @@ public class ServicoAudio extends Service {
     public void onDestroy() {
         super.onDestroy();
         cicloAtivo = false;
-        /*if(temposCalc != null) {
+        if(temposCalc != null) {
             gravarTXT("T "+nomeTXT);
-        }*/
+        }
     }
 
     private void gravarTXT(String nomeArq){

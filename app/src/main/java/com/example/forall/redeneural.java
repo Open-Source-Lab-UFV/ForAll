@@ -13,9 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.PowerManager;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.ImageSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -130,16 +127,6 @@ public class redeneural extends Fragment {
             radioGroup2.check(R.id.radioButton4);
         }
 
-        ImageSpan imageSpanOff = new ImageSpan(getActivity(), android.R.drawable.ic_media_play);
-        SpannableString contentOff = new SpannableString("X");
-        contentOff.setSpan(imageSpanOff, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ImageSpan imageSpanOn = new ImageSpan(getActivity(), android.R.drawable.ic_media_pause);
-        SpannableString contentOn = new SpannableString("X");
-        contentOn.setSpan(imageSpanOn, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        toggleButton.setText(contentOff);
-        toggleButton.setTextOn(contentOn);
-        toggleButton.setTextOff(contentOff);
-
         //Botão q faz as coisa
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -185,7 +172,7 @@ public class redeneural extends Fragment {
                             tempo = 3000;
                         }
                         aquisicao = false;
-                        //Toast.makeText(getActivity(), "Sinalizando a cada "+tempo/quantSinal+"ms.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Sinalizando a cada "+tempo/quantSinal+"ms.", Toast.LENGTH_SHORT).show();
                     }
                     String txtNome = nomeTXT.getText().toString();
                     Intent serviceIntent = new Intent(getActivity(),ServicoAudio.class);

@@ -9,7 +9,7 @@
     <string name="togglebutton">ToggleButton</string>
     <string name="OFF">Ativar</string>
     <string name="ON">Desativar</string>
-    <string name="userTime">Insira o tempo do ciclo em milissegundos:</string>
+    <string name="userTime">Insira o tempo em milissegundos:</string>
     <string name="curta">Curta</string>
     <string name="m_dia">Média</string>
     <string name="longa">Longa</string>
