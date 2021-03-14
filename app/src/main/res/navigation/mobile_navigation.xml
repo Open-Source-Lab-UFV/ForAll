@@ -9,35 +9,20 @@
         android:id="@+id/navigation_settings"
         android:name="com.oslu.forall.ui.settings.SettingsFragment"
         android:label="settings_fragment"
-        tools:layout="@layout/settings_fragment" >
-        <action
-            android:id="@+id/action_navigation_settings_to_navigation_home"
-            app:destination="@id/navigation_home" />
-    </fragment>
+        tools:layout="@layout/settings_fragment" />
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.oslu.forall.ui.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/home_fragment" >
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
-        <action
-            android:id="@+id/action_navigation_home_to_navigation_musicList"
-            app:destination="@id/navigation_musicList" />
-    </fragment>
+        tools:layout="@layout/home_fragment" />
 
 
     <fragment
         android:id="@+id/navigation_musicList"
         android:name="com.oslu.forall.ui.settings.SettingsFragment"
         android:label="settings_fragment"
-        tools:layout="@layout/settings_fragment" >
-        <action
-            android:id="@+id/action_navigation_musicList_to_navigation_home"
-            app:destination="@id/navigation_home" />
-    </fragment>
+        tools:layout="@layout/settings_fragment" />
 
 
 </navigation>

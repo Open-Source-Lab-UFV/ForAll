@@ -8,64 +8,76 @@
     tools:context=".ui.home.HomeFragment">
 
 
-    <ImageButton
+    <Button
         android:id="@+id/toggleDanceAssist"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_play_24_white"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/roundedbutton"
+        android:contentDescription="Dance Assistance Controller"
+        android:drawableLeft="@drawable/ic_logs_24_white"
+        android:padding="16dp"
+        android:text="Log"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        android:contentDescription="Dance Assistance Controller" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/toggleAssistType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/roundedbutton"
+        android:drawableLeft="@drawable/ic_vibration_24_white"
+        android:padding="16dp"
+        android:text="Signal"
+        app:layout_constraintBottom_toTopOf="@+id/toggleDanceAssist"
         app:layout_constraintEnd_toStartOf="@+id/assistDuration"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toggleDanceAssist"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/assistDuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/roundedbutton"
+        android:drawableLeft="@drawable/ic_timelapse_24_white"
+        android:padding="16dp"
         android:text="Duration"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintBottom_toTopOf="@+id/toggleDanceAssist"
+        app:layout_constraintEnd_toEndOf="@+id/toggleDanceAssist"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/toggleInputType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/roundedbutton"
+        android:drawableLeft="@drawable/ic_music_list_24_white"
+        android:padding="16dp"
         android:text="Input"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/toggleDanceAssist"
         app:layout_constraintEnd_toStartOf="@+id/toggleTempo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggleAssistType"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toggleDanceAssist"
+        app:layout_constraintTop_toBottomOf="@+id/toggleAssistType" />
 
     <Button
         android:id="@+id/toggleTempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/roundedbutton"
+        android:drawableLeft="@drawable/ic_tempo_weak_24_white"
+        android:padding="16dp"
         android:text="Tempo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintBottom_toTopOf="@+id/toggleDanceAssist"
+        app:layout_constraintEnd_toEndOf="@+id/toggleDanceAssist"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/assistDuration"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/assistDuration" />
 
 
 

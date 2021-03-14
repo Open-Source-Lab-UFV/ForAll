@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fab"
-        android:src="@drawable/ic_baseline_mic_24_white"
+        android:src="@drawable/ic_play_24_black"
         app:layout_anchor="@id/bottomAppBar"
         android:contentDescription="Start Listening" />
 
