@@ -6,6 +6,6 @@
 
 <div class="row">
   <div class="column">
-    <img src="https://raw.githubusercontent.com/Open-Source-Lab-UFV/ForAll/main/readmeAssets/InApp.jpg" height="600">
+    <img src="https://raw.githubusercontent.com/Open-Source-Lab-UFV/ForAll/kotlin-rewrite/readmeAssets/InApp.jpg" height="600">
   </div>
 </div>
