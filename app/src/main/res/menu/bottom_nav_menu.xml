@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- //TODO remember to refactor all strings to res/values/strings in bottom nav -->
+
+    <item
+        android:id="@+id/Settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
+
+    <item
+        android:id="@+id/MusicList"
+        android:icon="@drawable/ic_music_list_24_black"
+        android:title="MusicList" />
+
+
+</menu>

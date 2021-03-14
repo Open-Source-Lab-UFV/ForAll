@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!--
+        Adding bottom app bar + FAB for navigation, from ref/guide:
+        https://www.geeksforgeeks.org/how-to-add-a-floating-action-button-to-bottom-navigation-bar-in-android/
+        -->
+
+<!--        <style name="Theme.Fab_Bottom_app_bar" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--            <item name="colorPrimary">@color/purple_200</item>-->
+<!--            <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--            <item name="colorOnPrimary">@color/black</item>-->
+<!--        </style>-->
+
     </style>
 </resources>
