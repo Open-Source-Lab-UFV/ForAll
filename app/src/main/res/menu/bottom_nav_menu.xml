@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- //TODO remember to refactor all strings to res/values/strings in bottom nav -->
-
     <item
-        android:id="@+id/Settings"
+        android:id="@+id/navigation_settings"
         android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings" />
+        android:title="@string/settings_descrition_navBar" />
 
     <item
-        android:id="@+id/placeholder"
+        android:id="@+id/navigation_home"
         android:title="" />
 
     <item
-        android:id="@+id/MusicList"
+        android:id="@+id/navigation_musicList"
         android:icon="@drawable/ic_music_list_24_black"
-        android:title="MusicList" />
+        android:title="@string/musicList_descrition_navBar" />
 
 
 </menu>
+
+    <!-- //TODO remember to refactor all strings to res/values/strings in bottom nav -->
+<!--<item-->
+<!--android:id="@+id/navigation_musicList"-->
+<!--android:icon="@drawable/ic_music_list_24_black"-->
+<!--android:title="@string/musicList_descrition_navBar" />-->

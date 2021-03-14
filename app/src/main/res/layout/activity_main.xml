@@ -1,113 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
-    tools:context=".views.MainActivity">
-    <!-- //TODO remember to refactor all strings to res/values/strings in home screen -->
-    <!-- //TODO remember to refactor all buttons and add icons (avoid text)  -->
-    <!-- //TODO make toggleDanceAssist icon dynamic/reactive -->
-    <!-- //TODO change bottomNav color to match dark theme -->
-
-    <ImageButton
-        android:id="@+id/toggleDanceAssist"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_play_24_white"
-        android:background="@drawable/roundedbutton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        android:contentDescription="Dance Assistance Controller" />
-
-    <Button
-        android:id="@+id/toggleAssistType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Type"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/assistDuration"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <Button
-        android:id="@+id/assistDuration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Duration"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <Button
-        android:id="@+id/toggleInputType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Input"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/toggleTempo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggleAssistType"
-        app:layout_constraintVertical_bias="0.25" />
-
-    <Button
-        android:id="@+id/toggleTempo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tempo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/assistDuration"
-        app:layout_constraintVertical_bias="0.25" />
+    android:background="@color/draculaDarkBackground">
 
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <fragment
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent"
+        android:id="@+id/my_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/mobile_navigation"
+        app:defaultNavHost="true" />
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:fabCradleMargin="10dp"
-            app:fabCradleRoundedCornerRadius="10dp"
-            app:fabCradleVerticalOffset="10dp">
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottomAppBar"
+        android:backgroundTint="@color/darkBars"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        >
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                app:menu="@menu/bottom_nav_menu" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/make_backround_transparent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp" />
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="StartRecording"
-            android:src="@drawable/ic_baseline_mic_24_white"
-            app:layout_anchor="@id/bottomAppBar" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:src="@drawable/ic_baseline_mic_24_white"
+        app:layout_anchor="@id/bottomAppBar"
+        android:contentDescription="Start Listening" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!-- //TODO remember to refactor all strings to res/values/strings in home screen -->
+<!-- //TODO remember to refactor all buttons and add icons (avoid text)  -->
+<!-- //TODO make toggleDanceAssist icon dynamic/reactive -->
+<!-- //TODO make FAB icon dynamic/reactive to navigate to main screen then record -->
+
+<!-- Implementation Reference: Material Design
+https://material.io/components/bottom-navigation#usage -->

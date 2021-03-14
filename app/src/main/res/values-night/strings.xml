@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ForAll</string>
     <string name="musicList_descrition_navBar">Music List</string>
     <string name="settings_descrition_navBar">Settings</string>
 </resources>

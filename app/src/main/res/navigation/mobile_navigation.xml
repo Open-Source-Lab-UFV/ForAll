@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.oslu.forall.ui.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.oslu.forall.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_musicList"
+            app:destination="@id/navigation_musicList" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_musicList"
+        android:name="com.oslu.forall.ui.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" >
+        <action
+            android:id="@+id/action_navigation_musicList_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+</navigation>
